@@ -1,0 +1,4 @@
+#Fri Apr 17 14:31:27 WAT 2026
+base.0=C\:\\Users\\MERVEILLE\\Downloads\\Telegram Desktop\\SafeRoute\\SafeRoute\\SafeRoute\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

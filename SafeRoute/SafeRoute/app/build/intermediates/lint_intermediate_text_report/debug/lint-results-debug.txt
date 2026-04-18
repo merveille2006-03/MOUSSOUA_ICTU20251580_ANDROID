@@ -1,0 +1,840 @@
+C:\Users\MERVEILLE\.gradle\caches\transforms-3\4045e1507c08c6ef7f5194ae4e79002c\transformed\runtime-release\jars\lint.jar: Warning: Library lint checks reference invalid APIs; these checks will be skipped!
+
+Lint found an issue registry (androidx.compose.runtime.lint.RuntimeIssueRegistry)
+which contains some references to invalid API:
+org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()
+(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)
+
+Therefore, this lint check library is not included
+in analysis. This affects the following lint checks:
+AutoboxingStateValueProperty
+AutoboxingStateCreation
+CoroutineCreationDuringComposition
+FlowOperatorInvokedInComposition
+ComposableLambdaParameterNaming
+ComposableLambdaParameterPosition
+ComposableNaming
+StateFlowValueCalledInComposition
+CompositionLocalNaming
+MutableCollectionMutableState
+ProduceStateDoesNotAssignValue
+RememberReturnType
+OpaqueUnitKey
+UnrememberedMutableState
+
+To use this lint check, upgrade to a more recent version
+of the library. [ObsoleteLintCustomCheck]
+
+   Explanation for issues of type "ObsoleteLintCustomCheck":
+   Lint can be extended with "custom checks": additional checks implemented by
+   developers and libraries to for example enforce specific API usages
+   required by a library or a company coding style guideline.
+
+   The Lint APIs are not yet stable, so these checks may either cause a
+   performance degradation, or stop working, or provide wrong results.
+
+   This warning flags custom lint checks that are found to be using obsolete
+   APIs and will need to be updated to run in the current lint environment.
+
+   It may also flag issues found to be using a newer version of the API,
+   meaning that you need to use a newer version of lint (or Android Studio or
+   Gradle plugin etc) to work with these checks.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:106: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        advertiser.startAdvertising(settings, data, advertiseCallback)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:110: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        bluetoothAdapter?.bluetoothLeAdvertiser?.stopAdvertising(advertiseCallback)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:134: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        bluetoothLeScanner?.startScan(listOf(filter), settings, scanCallback)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:138: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        bluetoothLeScanner?.stopScan(scanCallback)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:153: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        device.connectGatt(this, false, gattCallback)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:161: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+                    _connectionState.value = BluetoothState.Connected(gatt?.device?.name ?: "Unknown")
+                                                                      ~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:162: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+                    gatt?.discoverServices()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:176: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        bluetoothGattServer = manager.openGattServer(this, gattServerCallback)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:187: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+        bluetoothGattServer?.addService(service)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BluetoothService.kt:202: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+                bluetoothGattServer?.sendResponse(device, requestId, BluetoothGatt.GATT_SUCCESS, offset, value)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingPermission":
+   This check scans through your code and libraries and looks at the APIs
+   being used, and checks this against the set of permissions required to
+   access those APIs. If the code using those APIs is called at runtime, then
+   the program will crash.
+
+   Furthermore, for permissions that are revocable (with targetSdkVersion 23),
+   client code must also be prepared to handle the calls throwing an exception
+   if the user rejects the request for permission at runtime.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\LocationTrackingService.kt:57: Warning: Field requires API level 29 (current min is 26): android.content.pm.ServiceInfo#FOREGROUND_SERVICE_TYPE_LOCATION [InlinedApi]
+            android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\presentation\MainActivity.kt:52: Warning: Field requires API level 33 (current min is 26): android.Manifest.permission#POST_NOTIFICATIONS [InlinedApi]
+                            android.Manifest.permission.POST_NOTIFICATIONS
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\presentation\screens\PermissionsScreen.kt:85: Warning: Field requires API level 33 (current min is 26): android.Manifest.permission#POST_NOTIFICATIONS [InlinedApi]
+                it.permission == android.Manifest.permission.POST_NOTIFICATIONS
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InlinedApi":
+   This check scans through all the Android API field references in the
+   application and flags certain constants, such as static final integers and
+   Strings, which were introduced in later versions. These will actually be
+   copied into the class files rather than being referenced, which means that
+   the value is available even when running on older devices. In some cases
+   that's fine, and in other cases it can result in a runtime crash or
+   incorrect behavior. It depends on the context, so consider the code
+   carefully and decide whether it's safe and can be suppressed or whether the
+   code needs to be guarded.
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\LocationTrackingService.kt:54: Error: Call requires API level 29 (current min is 26): android.app.Service#startForeground [NewApi]
+        startForeground(
+        ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\themes.xml:7: Error: android:windowLightNavigationBar requires API level 27 (current min is 26) [NewApi]
+        <item name="android:windowLightNavigationBar">true</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\themes.xml:14: Error: android:windowLightNavigationBar requires API level 27 (current min is 26) [NewApi]
+        <item name="android:windowLightNavigationBar">false</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewApi":
+   This check scans through all the Android API calls in the application and
+   warns about any calls that are not available on all versions targeted by
+   this application (according to its minimum SDK attribute in the manifest).
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+   If you are deliberately setting android: attributes in style definitions,
+   make sure you place this in a values-vNN folder in order to avoid running
+   into runtime conflicts on certain devices where manufacturers have added
+   custom attributes whose ids conflict with the new ones on later platforms.
+
+   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+   the element will only be inflated in an adequate context.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\FallDetectionService.kt:58: Error: Suspicious indentation: This is indented but is not continuing the previous expression (val notification = N...) [SuspiciousIndentation]
+            if (checkLocationPermission()) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\FallDetectionService.kt:52: Previous statement here
+
+   Explanation for issues of type "SuspiciousIndentation":
+   This check looks for cases where the indentation suggests a grouping that
+   isn't actually there in the code. A common example of this would be
+   something like
+   if (column > width)
+       line++
+       column = 0
+   Here, the column = 0 line will be executed every single time, not just if
+   the condition is true.
+
+   Available options:
+
+   **always-run** (default is false):
+   Whether this check should be included while editing.
+
+   While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an `if` statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="SuspiciousIndentation">
+           <option name="always-run" value="false" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:23: Warning: Most apps don't need access to high sensor sampling rate. [HighSamplingRate]
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HighSamplingRate":
+   Most apps don't need access to high sensor sampling rate. Double check your
+   use case to ensure your app absolutely needs access to sensor sampling rate
+   > 200Hz. Be prepared for your app to be rejected from listing on Play Store
+   until your use case for high sensor sampling rate has been reviewed and
+   validated by the policy team.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:85: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:86: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:87: Warning: A newer version of androidx.activity:activity-compose than 1.8.1 is available: 1.13.0 [GradleDependency]
+    implementation("androidx.activity:activity-compose:1.8.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:98: Warning: A newer version of androidx.compose.material3:material3 than 1.2.1 is available: 1.4.0 [GradleDependency]
+    implementation("androidx.compose.material3:material3:1.2.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:102: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.7 [GradleDependency]
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:105: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:106: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:111: Warning: A newer version of androidx.hilt:hilt-navigation-compose than 1.1.0 is available: 1.3.0 [GradleDependency]
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:117: Warning: A newer version of androidx.core:core-splashscreen than 1.0.1 is available: 1.2.0 [GradleDependency]
+    implementation("androidx.core:core-splashscreen:1.0.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:126: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.7 [GradleDependency]
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:129: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation("androidx.room:room-runtime:2.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:130: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation("androidx.room:room-ktx:2.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:131: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4 [GradleDependency]
+    kapt("androidx.room:room-compiler:2.6.1")
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:134: Warning: A newer version of androidx.datastore:datastore-preferences than 1.0.0 is available: 1.2.1 [GradleDependency]
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:137: Warning: A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.3.0 [GradleDependency]
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:146: Warning: A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.11.2 [GradleDependency]
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:160: Warning: A newer version of com.google.android.gms:play-services-maps than 18.2.0 is available: 20.0.0 [GradleDependency]
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:163: Warning: A newer version of com.google.android.gms:play-services-auth than 20.7.0 is available: 21.5.1 [GradleDependency]
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:180: Warning: A newer version of androidx.test:core-ktx than 1.5.0 is available: 1.7.0 [GradleDependency]
+    testImplementation("androidx.test:core-ktx:1.5.0")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:181: Warning: A newer version of androidx.test.ext:junit-ktx than 1.1.5 is available: 1.3.0 [GradleDependency]
+    testImplementation("androidx.test.ext:junit-ktx:1.1.5")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:185: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:186: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:187: Warning: A newer version of androidx.test.espresso:espresso-intents than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:189: Warning: A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test:runner:1.5.2")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:190: Warning: A newer version of androidx.test:rules than 1.5.0 is available: 1.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test:rules:1.5.0")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:65: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+            android:screenOrientation="portrait"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LockedOrientationActivity":
+   The <activity> element should not be locked to any orientation so that
+   users can take advantage of the multi-window environments and larger
+   screens available on Android. To fix the issue, consider declaring the
+   corresponding activity element with `screenOrientation="unspecified"or
+   "fullSensor"` attribute.
+
+   https://developer.android.com/topic/arc/window-management
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:12: Error: Permission exists without corresponding hardware <uses-feature android:name="android.hardware.telephony" required="false"> tag [PermissionImpliesUnsupportedChromeOsHardware]
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+     ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PermissionImpliesUnsupportedChromeOsHardware":
+   The <uses-permission> element should not require a permission that implies
+   an unsupported large screen hardware feature. Google Play assumes that
+   certain hardware related permissions indicate that the underlying hardware
+   features are required by default. To fix the issue, consider declaring the
+   corresponding <uses-feature> element with required="false" attribute.
+
+   https://developer.android.com/topic/arc/manifest.html#implied-features
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BootReceiver.kt:50: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\BootReceiver.kt:62: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\SafeRouteApplication.kt:27: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\presentation\viewmodels\MainViewModel.kt:28: Warning: This field leaks a context object [StaticFieldLeak]
+    private val context = application.applicationContext
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\build.gradle.kts:131: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt("androidx.room:room-compiler:2.6.1")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KaptUsageInsteadOfKsp":
+   KSP is a more efficient replacement for kapt. For libraries that support
+   both, KSP should be used to improve build times.
+
+   https://developer.android.com/studio/build/migrate-to-ksp
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\SOSAlertService.kt:125: Warning: Notifications should only launch a Service from notification actions (addAction) [LaunchActivityFromNotification]
+            .setContentIntent(cancelIntent)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\java\com\saferoute\service\SOSAlertService.kt:111: This Service intent is launched from a notification; this is discouraged except as notification actions
+
+   Explanation for issues of type "LaunchActivityFromNotification":
+   Notifications should only launch activities -- that's what users expect
+   (and has been the guidance in both the Android SDK and Material Design
+   documentation for a while).
+
+   A Service or a BroadcastReceiver should not be used as an intermediate,
+   because this can lead to significant performance problems, and as a result,
+   this will not be allowed in Android 12.
+
+   https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=en#Actions
+   https://d.android.com/r/studio-ui/designer/material/notifications-behavior
+   https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=en
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:3: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:8: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:9: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:13: Warning: The resource R.color.primary_blue_dark appears to be unused [UnusedResources]
+    <color name="primary_blue_dark">#FF1D4ED8</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:14: Warning: The resource R.color.primary_blue_light appears to be unused [UnusedResources]
+    <color name="primary_blue_light">#FF60A5FA</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:16: Warning: The resource R.color.secondary_teal appears to be unused [UnusedResources]
+    <color name="secondary_teal">#FF14B8A6</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:17: Warning: The resource R.color.secondary_teal_dark appears to be unused [UnusedResources]
+    <color name="secondary_teal_dark">#FF0D9488</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:20: Warning: The resource R.color.alert_red appears to be unused [UnusedResources]
+    <color name="alert_red">#FFDC2626</color>
+           ~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:21: Warning: The resource R.color.alert_red_dark appears to be unused [UnusedResources]
+    <color name="alert_red_dark">#FFB91C1C</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:22: Warning: The resource R.color.alert_orange appears to be unused [UnusedResources]
+    <color name="alert_orange">#FFF97316</color>
+           ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:23: Warning: The resource R.color.warning_yellow appears to be unused [UnusedResources]
+    <color name="warning_yellow">#FFFBBF24</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:26: Warning: The resource R.color.success_green appears to be unused [UnusedResources]
+    <color name="success_green">#FF22C55E</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:27: Warning: The resource R.color.success_green_dark appears to be unused [UnusedResources]
+    <color name="success_green_dark">#FF16A34A</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:30: Warning: The resource R.color.gray_50 appears to be unused [UnusedResources]
+    <color name="gray_50">#FFF9FAFB</color>
+           ~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:31: Warning: The resource R.color.gray_100 appears to be unused [UnusedResources]
+    <color name="gray_100">#FFF3F4F6</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:32: Warning: The resource R.color.gray_200 appears to be unused [UnusedResources]
+    <color name="gray_200">#FFE5E7EB</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:33: Warning: The resource R.color.gray_300 appears to be unused [UnusedResources]
+    <color name="gray_300">#FFD1D5DB</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:34: Warning: The resource R.color.gray_400 appears to be unused [UnusedResources]
+    <color name="gray_400">#FF9CA3AF</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:35: Warning: The resource R.color.gray_500 appears to be unused [UnusedResources]
+    <color name="gray_500">#FF6B7280</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:36: Warning: The resource R.color.gray_600 appears to be unused [UnusedResources]
+    <color name="gray_600">#FF4B5563</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:37: Warning: The resource R.color.gray_700 appears to be unused [UnusedResources]
+    <color name="gray_700">#FF374151</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:38: Warning: The resource R.color.gray_800 appears to be unused [UnusedResources]
+    <color name="gray_800">#FF1F2937</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:39: Warning: The resource R.color.gray_900 appears to be unused [UnusedResources]
+    <color name="gray_900">#FF111827</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:42: Warning: The resource R.color.safe_zone_green appears to be unused [UnusedResources]
+    <color name="safe_zone_green">#FF10B981</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:43: Warning: The resource R.color.safe_zone_border appears to be unused [UnusedResources]
+    <color name="safe_zone_border">#FF34D399</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:47: Warning: The resource R.color.background_dark appears to be unused [UnusedResources]
+    <color name="background_dark">#FF0F172A</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:48: Warning: The resource R.color.surface_light appears to be unused [UnusedResources]
+    <color name="surface_light">#FFF8FAFC</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\colors.xml:49: Warning: The resource R.color.surface_dark appears to be unused [UnusedResources]
+    <color name="surface_dark">#FF1E293B</color>
+           ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\drawable\ic_notification_important.xml:2: Warning: The resource R.drawable.ic_notification_important appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.nav_home appears to be unused [UnusedResources]
+    <string name="nav_home">Accueil</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.nav_contacts appears to be unused [UnusedResources]
+    <string name="nav_contacts">Contacts</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.nav_zones appears to be unused [UnusedResources]
+    <string name="nav_zones">Zones</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:9: Warning: The resource R.string.nav_settings appears to be unused [UnusedResources]
+    <string name="nav_settings">Paramètres</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:10: Warning: The resource R.string.nav_history appears to be unused [UnusedResources]
+    <string name="nav_history">Historique</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.cancel appears to be unused [UnusedResources]
+    <string name="cancel">Annuler</string>
+            ~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.confirm appears to be unused [UnusedResources]
+    <string name="confirm">Confirmer</string>
+            ~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.save appears to be unused [UnusedResources]
+    <string name="save">Enregistrer</string>
+            ~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:16: Warning: The resource R.string.delete appears to be unused [UnusedResources]
+    <string name="delete">Supprimer</string>
+            ~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:17: Warning: The resource R.string.edit appears to be unused [UnusedResources]
+    <string name="edit">Modifier</string>
+            ~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.add appears to be unused [UnusedResources]
+    <string name="add">Ajouter</string>
+            ~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:19: Warning: The resource R.string.back appears to be unused [UnusedResources]
+    <string name="back">Retour</string>
+            ~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.close appears to be unused [UnusedResources]
+    <string name="close">Fermer</string>
+            ~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.loading appears to be unused [UnusedResources]
+    <string name="loading">Chargement…</string>
+            ~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.error appears to be unused [UnusedResources]
+    <string name="error">Erreur</string>
+            ~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.success appears to be unused [UnusedResources]
+    <string name="success">Succès</string>
+            ~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.login_title appears to be unused [UnusedResources]
+    <string name="login_title">Connexion</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.login_pin_hint appears to be unused [UnusedResources]
+    <string name="login_pin_hint">Code PIN</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.login_biometric appears to be unused [UnusedResources]
+    <string name="login_biometric">Empreinte digitale</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.login_button appears to be unused [UnusedResources]
+    <string name="login_button">Se connecter</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:32: Warning: The resource R.string.home_title appears to be unused [UnusedResources]
+    <string name="home_title">SafeRoute</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.home_status_protection appears to be unused [UnusedResources]
+    <string name="home_status_protection">Protection</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.home_status_gps appears to be unused [UnusedResources]
+    <string name="home_status_gps">GPS</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.home_status_zones appears to be unused [UnusedResources]
+    <string name="home_status_zones">Zones</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:36: Warning: The resource R.string.home_sos_button appears to be unused [UnusedResources]
+    <string name="home_sos_button">SOS</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.home_sos_hint appears to be unused [UnusedResources]
+    <string name="home_sos_hint">Maintenez pour alerter</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.home_fall_detected appears to be unused [UnusedResources]
+    <string name="home_fall_detected">Chute détectée!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.home_fall_message appears to be unused [UnusedResources]
+    <string name="home_fall_message">Êtes-vous OK? Répondez dans 30 secondes.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.home_fall_ok appears to be unused [UnusedResources]
+    <string name="home_fall_ok">Je vais bien</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:41: Warning: The resource R.string.home_fall_alert appears to be unused [UnusedResources]
+    <string name="home_fall_alert">Envoyer alerte</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.contacts_title appears to be unused [UnusedResources]
+    <string name="contacts_title">Contacts d\'urgence</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.contacts_empty appears to be unused [UnusedResources]
+    <string name="contacts_empty">Aucun contact</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.contacts_empty_hint appears to be unused [UnusedResources]
+    <string name="contacts_empty_hint">Ajoutez des contacts d\'urgence qui seront alertés en cas de danger</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:47: Warning: The resource R.string.contacts_add appears to be unused [UnusedResources]
+    <string name="contacts_add">Ajouter un contact</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:48: Warning: The resource R.string.contacts_name appears to be unused [UnusedResources]
+    <string name="contacts_name">Nom</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:49: Warning: The resource R.string.contacts_phone appears to be unused [UnusedResources]
+    <string name="contacts_phone">Téléphone</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.contacts_email appears to be unused [UnusedResources]
+    <string name="contacts_email">Email (optionnel)</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:51: Warning: The resource R.string.contacts_relationship appears to be unused [UnusedResources]
+    <string name="contacts_relationship">Relation</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.contacts_family appears to be unused [UnusedResources]
+    <string name="contacts_family">Famille</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.contacts_friend appears to be unused [UnusedResources]
+    <string name="contacts_friend">Ami</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.contacts_colleague appears to be unused [UnusedResources]
+    <string name="contacts_colleague">Collègue</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.contacts_other appears to be unused [UnusedResources]
+    <string name="contacts_other">Autre</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:58: Warning: The resource R.string.zones_title appears to be unused [UnusedResources]
+    <string name="zones_title">Zones sécurisées</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:59: Warning: The resource R.string.zones_empty appears to be unused [UnusedResources]
+    <string name="zones_empty">Aucune zone sécurisée</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:60: Warning: The resource R.string.zones_empty_hint appears to be unused [UnusedResources]
+    <string name="zones_empty_hint">Définissez des zones comme votre domicile ou votre travail</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.zones_add appears to be unused [UnusedResources]
+    <string name="zones_add">Ajouter une zone</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.zones_name appears to be unused [UnusedResources]
+    <string name="zones_name">Nom de la zone</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:63: Warning: The resource R.string.zones_radius appears to be unused [UnusedResources]
+    <string name="zones_radius">Rayon (mètres)</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:64: Warning: The resource R.string.zones_type appears to be unused [UnusedResources]
+    <string name="zones_type">Type de zone</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:65: Warning: The resource R.string.zones_home appears to be unused [UnusedResources]
+    <string name="zones_home">Domicile</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:66: Warning: The resource R.string.zones_work appears to be unused [UnusedResources]
+    <string name="zones_work">Travail</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:67: Warning: The resource R.string.zones_school appears to be unused [UnusedResources]
+    <string name="zones_school">École</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:68: Warning: The resource R.string.zones_inside appears to be unused [UnusedResources]
+    <string name="zones_inside">À l\'intérieur</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.settings_title appears to be unused [UnusedResources]
+    <string name="settings_title">Paramètres</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:72: Warning: The resource R.string.settings_protection appears to be unused [UnusedResources]
+    <string name="settings_protection">Protection</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:73: Warning: The resource R.string.settings_fall_detection appears to be unused [UnusedResources]
+    <string name="settings_fall_detection">Détection de chute</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:74: Warning: The resource R.string.settings_fall_detection_hint appears to be unused [UnusedResources]
+    <string name="settings_fall_detection_hint">Surveille les mouvements pour détecter les chutes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:75: Warning: The resource R.string.settings_location_tracking appears to be unused [UnusedResources]
+    <string name="settings_location_tracking">Suivi GPS</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:76: Warning: The resource R.string.settings_location_tracking_hint appears to be unused [UnusedResources]
+    <string name="settings_location_tracking_hint">Surveille votre position en arrière-plan</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:77: Warning: The resource R.string.settings_zone_monitoring appears to be unused [UnusedResources]
+    <string name="settings_zone_monitoring">Surveillance des zones</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:78: Warning: The resource R.string.settings_zone_monitoring_hint appears to be unused [UnusedResources]
+    <string name="settings_zone_monitoring_hint">Alerte en cas de sortie anormale d\'une zone</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:79: Warning: The resource R.string.settings_sensitivity appears to be unused [UnusedResources]
+    <string name="settings_sensitivity">Sensibilité</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:80: Warning: The resource R.string.settings_sensitivity_low appears to be unused [UnusedResources]
+    <string name="settings_sensitivity_low">Faible</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:81: Warning: The resource R.string.settings_sensitivity_medium appears to be unused [UnusedResources]
+    <string name="settings_sensitivity_medium">Moyenne</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:82: Warning: The resource R.string.settings_sensitivity_high appears to be unused [UnusedResources]
+    <string name="settings_sensitivity_high">Élevée</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:83: Warning: The resource R.string.settings_auto_send appears to be unused [UnusedResources]
+    <string name="settings_auto_send">Envoi automatique</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:84: Warning: The resource R.string.settings_auto_send_hint appears to be unused [UnusedResources]
+    <string name="settings_auto_send_hint">Envoyer l\'alerte si pas de réponse après 30s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:85: Warning: The resource R.string.settings_sos appears to be unused [UnusedResources]
+    <string name="settings_sos">Alerte SOS</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:86: Warning: The resource R.string.settings_countdown appears to be unused [UnusedResources]
+    <string name="settings_countdown">Compte à rebours</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:87: Warning: The resource R.string.settings_include_location appears to be unused [UnusedResources]
+    <string name="settings_include_location">Inclure la position</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:88: Warning: The resource R.string.settings_include_location_hint appears to be unused [UnusedResources]
+    <string name="settings_include_location_hint">Joindre votre position GPS aux alertes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:89: Warning: The resource R.string.settings_security appears to be unused [UnusedResources]
+    <string name="settings_security">Sécurité</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:90: Warning: The resource R.string.settings_biometric appears to be unused [UnusedResources]
+    <string name="settings_biometric">Empreinte digitale</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:91: Warning: The resource R.string.settings_biometric_hint appears to be unused [UnusedResources]
+    <string name="settings_biometric_hint">Requiert l\'authentification biométrique</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:92: Warning: The resource R.string.settings_notifications appears to be unused [UnusedResources]
+    <string name="settings_notifications">Notifications</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:93: Warning: The resource R.string.settings_sound appears to be unused [UnusedResources]
+    <string name="settings_sound">Sons</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:94: Warning: The resource R.string.settings_sound_hint appears to be unused [UnusedResources]
+    <string name="settings_sound_hint">Jouer des sons pour les alertes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:95: Warning: The resource R.string.settings_vibration appears to be unused [UnusedResources]
+    <string name="settings_vibration">Vibrations</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:96: Warning: The resource R.string.settings_vibration_hint appears to be unused [UnusedResources]
+    <string name="settings_vibration_hint">Vibrer pour les alertes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:97: Warning: The resource R.string.settings_communication appears to be unused [UnusedResources]
+    <string name="settings_communication">Communication</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:98: Warning: The resource R.string.settings_bluetooth appears to be unused [UnusedResources]
+    <string name="settings_bluetooth">Bluetooth</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:99: Warning: The resource R.string.settings_bluetooth_hint appears to be unused [UnusedResources]
+    <string name="settings_bluetooth_hint">Fonctionnement hors ligne via Bluetooth</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:100: Warning: The resource R.string.settings_reset appears to be unused [UnusedResources]
+    <string name="settings_reset">Réinitialiser les paramètres</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:103: Warning: The resource R.string.history_fall_title appears to be unused [UnusedResources]
+    <string name="history_fall_title">Historique des chutes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:104: Warning: The resource R.string.history_fall_empty appears to be unused [UnusedResources]
+    <string name="history_fall_empty">Aucune chute détectée</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:105: Warning: The resource R.string.history_fall_empty_hint appears to be unused [UnusedResources]
+    <string name="history_fall_empty_hint">C\'est une bonne nouvelle!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:106: Warning: The resource R.string.history_alert_title appears to be unused [UnusedResources]
+    <string name="history_alert_title">Historique des alertes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:107: Warning: The resource R.string.history_alert_empty appears to be unused [UnusedResources]
+    <string name="history_alert_empty">Aucune alerte</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:108: Warning: The resource R.string.history_stats appears to be unused [UnusedResources]
+    <string name="history_stats">Statistiques</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:109: Warning: The resource R.string.history_total appears to be unused [UnusedResources]
+    <string name="history_total">Total</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:110: Warning: The resource R.string.history_manual appears to be unused [UnusedResources]
+    <string name="history_manual">SOS</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:111: Warning: The resource R.string.history_fall appears to be unused [UnusedResources]
+    <string name="history_fall">Chutes</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:112: Warning: The resource R.string.history_zone appears to be unused [UnusedResources]
+    <string name="history_zone">Zones</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:113: Warning: The resource R.string.history_success_rate appears to be unused [UnusedResources]
+    <string name="history_success_rate">Taux de succès</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:116: Warning: The resource R.string.permissions_title appears to be unused [UnusedResources]
+    <string name="permissions_title">Permissions requises</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:117: Warning: The resource R.string.permissions_description appears to be unused [UnusedResources]
+    <string name="permissions_description">SafeRoute a besoin de certaines permissions pour fonctionner correctement</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:118: Warning: The resource R.string.permissions_location appears to be unused [UnusedResources]
+    <string name="permissions_location">Localisation</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:119: Warning: The resource R.string.permissions_location_hint appears to be unused [UnusedResources]
+    <string name="permissions_location_hint">Pour suivre votre position et envoyer vos coordonnées</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:120: Warning: The resource R.string.permissions_sms appears to be unused [UnusedResources]
+    <string name="permissions_sms">SMS</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:121: Warning: The resource R.string.permissions_sms_hint appears to be unused [UnusedResources]
+    <string name="permissions_sms_hint">Pour envoyer des alertes à vos contacts</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:122: Warning: The resource R.string.permissions_notifications appears to be unused [UnusedResources]
+    <string name="permissions_notifications">Notifications</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:123: Warning: The resource R.string.permissions_notifications_hint appears to be unused [UnusedResources]
+    <string name="permissions_notifications_hint">Pour vous alerter en cas de danger</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:124: Warning: The resource R.string.permissions_grant appears to be unused [UnusedResources]
+    <string name="permissions_grant">Accorder les permissions</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:125: Warning: The resource R.string.permissions_continue appears to be unused [UnusedResources]
+    <string name="permissions_continue">Continuer</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:128: Warning: The resource R.string.notification_fall_title appears to be unused [UnusedResources]
+    <string name="notification_fall_title">Détection de chute active</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:129: Warning: The resource R.string.notification_fall_text appears to be unused [UnusedResources]
+    <string name="notification_fall_text">Surveillance en arrière-plan…</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:130: Warning: The resource R.string.notification_location_title appears to be unused [UnusedResources]
+    <string name="notification_location_title">Suivi de localisation actif</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:131: Warning: The resource R.string.notification_location_text appears to be unused [UnusedResources]
+    <string name="notification_location_text">SafeRoute surveille votre position</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:132: Warning: The resource R.string.notification_sos_title appears to be unused [UnusedResources]
+    <string name="notification_sos_title">Alerte SOS envoyée</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:133: Warning: The resource R.string.notification_sos_text appears to be unused [UnusedResources]
+    <string name="notification_sos_text">Vos contacts d\'urgence ont été notifiés</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:134: Warning: The resource R.string.notification_zone_title appears to be unused [UnusedResources]
+    <string name="notification_zone_title">Sortie de zone détectée</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:137: Warning: The resource R.string.alert_sos_title appears to be unused [UnusedResources]
+    <string name="alert_sos_title">Confirmer l\'alerte SOS</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:138: Warning: The resource R.string.alert_sos_message appears to be unused [UnusedResources]
+    <string name="alert_sos_message">Cette action enverra immédiatement une alerte à tous vos contacts d\'urgence</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\strings.xml:139: Warning: The resource R.string.alert_sos_send appears to be unused [UnusedResources]
+    <string name="alert_sos_send">Envoyer l\'alerte</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\themes.xml:10: Warning: The resource R.style.Theme_SafeRoute_Dark appears to be unused [UnusedResources]
+    <style name="Theme.SafeRoute.Dark" parent="android:Theme.Material.NoActionBar">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\res\values\themes.xml:17: Warning: The resource R.style.Theme_SafeRoute_Splash appears to be unused [UnusedResources]
+    <style name="Theme.SafeRoute.Splash" parent="Theme.SafeRoute">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:50: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+15 errors, 187 warnings

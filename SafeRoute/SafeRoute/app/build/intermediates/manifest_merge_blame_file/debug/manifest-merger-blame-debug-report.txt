@@ -1,0 +1,585 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.saferoute"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:5-81
+14-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+15-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:9:5-85
+15-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:9:22-82
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:10:5-77
+16-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:10:22-74
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+17-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:11:5-86
+17-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:11:22-83
+18    <uses-permission android:name="android.permission.CALL_PHONE" />
+18-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:12:5-69
+18-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:12:22-66
+19    <uses-permission android:name="android.permission.VIBRATE" />
+19-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:13:5-66
+19-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:13:22-63
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:14:5-68
+20-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:14:22-65
+21    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+21-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:15:5-81
+21-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:15:22-78
+22    <uses-permission android:name="android.permission.BLUETOOTH" />
+22-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:16:5-68
+22-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:16:22-65
+23    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+23-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:17:5-74
+23-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:17:22-71
+24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+24-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:18:5-73
+24-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:18:22-70
+25    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+25-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:19:5-76
+25-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:19:22-73
+26    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+26-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:20:5-78
+26-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:20:22-75
+27    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+27-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:21:5-72
+27-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:21:22-69
+28    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+28-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:22:5-74
+28-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:22:22-71
+29    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+29-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:23:5-85
+29-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:23:22-82
+30    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+30-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:24:5-77
+30-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:24:22-74
+31    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+31-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:25:5-78
+31-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:25:22-75
+32    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+32-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:5-81
+32-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:22-78
+33
+34    <!-- Permission de base localisation -->
+35
+36    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+36-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:5-81
+36-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:8:22-78
+37
+38    <!-- OBLIGATOIRE pour FGS type location (Android 14+) -->
+39
+40
+41    <!-- Hardware features -->
+42    <uses-feature
+42-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:37:5-39:36
+43        android:name="android.hardware.bluetooth"
+43-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:38:9-50
+44        android:required="false" />
+44-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:39:9-33
+45    <uses-feature
+45-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:40:5-42:36
+46        android:name="android.hardware.bluetooth_le"
+46-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:41:9-53
+47        android:required="false" />
+47-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:42:9-33
+48    <uses-feature
+48-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:43:5-45:36
+49        android:name="android.hardware.location.gps"
+49-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:44:9-53
+50        android:required="false" />
+50-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:45:9-33
+51    <uses-feature
+51-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:46:5-48:35
+52        android:name="android.hardware.sensor.accelerometer"
+52-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:47:9-61
+53        android:required="true" />
+53-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:48:9-32
+54
+55    <!-- Include required permissions for Google Maps API to run. -->
+56    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+56-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+56-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:22-76
+57
+58    <uses-feature
+58-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+59        android:glEsVersion="0x00020000"
+59-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+60        android:required="true" />
+60-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+61
+62    <queries>
+62-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+63
+64        <!-- Needs to be explicitly declared on Android R+ -->
+65        <package android:name="com.google.android.apps.maps" />
+65-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+65-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+66    </queries>
+67
+68    <permission
+68-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+69        android:name="com.saferoute.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+69-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+70        android:protectionLevel="signature" />
+70-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+71
+72    <uses-permission android:name="com.saferoute.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+72-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+72-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+73
+74    <application
+74-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:50:5-116:19
+75        android:name="com.saferoute.SafeRouteApplication"
+75-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:51:9-45
+76        android:allowBackup="true"
+76-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:52:9-35
+77        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+77-->[androidx.core:core:1.12.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\f24ca4c065ce2c9979c50285c7cc4b72\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+78        android:dataExtractionRules="@xml/data_extraction_rules"
+78-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:53:9-65
+79        android:debuggable="true"
+80        android:extractNativeLibs="false"
+81        android:fullBackupContent="@xml/backup_rules"
+81-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:54:9-54
+82        android:label="@string/app_name"
+82-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:55:9-41
+83        android:supportsRtl="true"
+83-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:56:9-35
+84        android:theme="@style/Theme.SafeRoute" >
+84-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:57:9-47
+85
+86        <!-- Main Activity -->
+87        <activity
+87-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:61:9-72:20
+88            android:name="com.saferoute.presentation.MainActivity"
+88-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:62:13-54
+89            android:exported="true"
+89-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:63:13-36
+90            android:launchMode="singleTask"
+90-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:64:13-44
+91            android:screenOrientation="portrait"
+91-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:65:13-49
+92            android:theme="@style/Theme.SafeRoute"
+92-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:66:13-51
+93            android:windowSoftInputMode="adjustResize" >
+93-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:67:13-55
+94            <intent-filter>
+94-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:68:13-71:29
+95                <action android:name="android.intent.action.MAIN" />
+95-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:69:17-69
+95-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:69:25-66
+96
+97                <category android:name="android.intent.category.LAUNCHER" />
+97-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:70:17-77
+97-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:70:27-74
+98            </intent-filter>
+99        </activity>
+100
+101        <!-- Fall Detection Service -->
+102
+103        <service
+103-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:76:9-79:56
+104            android:name="com.saferoute.service.FallDetectionService"
+104-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:77:13-57
+105            android:exported="false"
+105-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:78:13-37
+106            android:foregroundServiceType="location" />
+106-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:79:13-53
+107
+108        <!-- Location Tracking Service -->
+109        <service
+109-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:82:9-86:56
+110            android:name="com.saferoute.service.LocationTrackingService"
+110-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:83:13-60
+111            android:enabled="true"
+111-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:84:13-35
+112            android:exported="false"
+112-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:85:13-37
+113            android:foregroundServiceType="location" />
+113-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:86:13-53
+114
+115        <!-- Bluetooth Service -->
+116        <service
+116-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:89:9-92:40
+117            android:name="com.saferoute.service.BluetoothService"
+117-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:90:13-53
+118            android:enabled="true"
+118-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:91:13-35
+119            android:exported="false" />
+119-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:92:13-37
+120
+121        <!-- SOS Alert Service -->
+122        <service
+122-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:95:9-99:56
+123            android:name="com.saferoute.service.SOSAlertService"
+123-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:96:13-52
+124            android:enabled="true"
+124-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:97:13-35
+125            android:exported="false"
+125-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:98:13-37
+126            android:foregroundServiceType="location" />
+126-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:99:13-53
+127
+128        <!-- Boot Receiver -->
+129        <receiver
+129-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:102:9-109:20
+130            android:name="com.saferoute.service.BootReceiver"
+130-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:103:13-49
+131            android:enabled="true"
+131-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:104:13-35
+132            android:exported="true" >
+132-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:105:13-36
+133            <intent-filter>
+133-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:106:13-108:29
+134                <action android:name="android.intent.action.BOOT_COMPLETED" />
+134-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:107:17-79
+134-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:107:25-76
+135            </intent-filter>
+136        </receiver>
+137
+138        <!-- Google Maps API Key -->
+139        <meta-data
+139-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:112:9-114:49
+140            android:name="com.google.android.geo.API_KEY"
+140-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:113:13-58
+141            android:value="YOUR_API_KEY_HERE" />
+141-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:114:13-46
+142
+143        <!-- Needs to be explicitly declared on P+ -->
+144        <uses-library
+144-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+145            android:name="org.apache.http.legacy"
+145-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+146            android:required="false" />
+146-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\cc7540340636f3c1b230c7e7aa937848\transformed\play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+147
+148        <activity
+148-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+149            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+149-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+150            android:excludeFromRecents="true"
+150-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+151            android:exported="false"
+151-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+152-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+153        <!--
+154            Service handling Google Sign-In user revocation. For apps that do not integrate with
+155            Google Sign-In, this service will never be started.
+156        -->
+157        <service
+157-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+158            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+158-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+159            android:exported="true"
+159-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+160            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+160-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+161            android:visibleToInstantApps="true" />
+161-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\3bfb54ac6724be6537c36df19be1b70a\transformed\play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+162
+163        <activity
+163-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c7325e32ad0b929285b4aec7e2036c35\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+164            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+164-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c7325e32ad0b929285b4aec7e2036c35\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+165            android:exported="false"
+165-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c7325e32ad0b929285b4aec7e2036c35\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+166            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+166-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c7325e32ad0b929285b4aec7e2036c35\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+167
+168        <provider
+168-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:29:9-37:20
+169            android:name="androidx.startup.InitializationProvider"
+169-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:30:13-67
+170            android:authorities="com.saferoute.androidx-startup"
+170-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:31:13-68
+171            android:exported="false" >
+171-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:32:13-37
+172            <meta-data
+172-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:34:13-36:52
+173                android:name="androidx.work.WorkManagerInitializer"
+173-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:35:17-68
+174                android:value="androidx.startup" />
+174-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:36:17-49
+175            <meta-data
+175-->[androidx.emoji2:emoji2:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7000a96fdecd5e0d93ba2dd857bd086d\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+176                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+176-->[androidx.emoji2:emoji2:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7000a96fdecd5e0d93ba2dd857bd086d\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+177                android:value="androidx.startup" />
+177-->[androidx.emoji2:emoji2:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7000a96fdecd5e0d93ba2dd857bd086d\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+178            <meta-data
+178-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c3bd0d42e74234d74d708bac4197a349\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+179                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+179-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c3bd0d42e74234d74d708bac4197a349\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+180                android:value="androidx.startup" />
+180-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c3bd0d42e74234d74d708bac4197a349\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+181            <meta-data
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+182                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+183                android:value="androidx.startup" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+184        </provider>
+185
+186        <service
+186-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:39:9-45:35
+187            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+187-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:40:13-88
+188            android:directBootAware="false"
+188-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:41:13-44
+189            android:enabled="@bool/enable_system_alarm_service_default"
+189-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:42:13-72
+190            android:exported="false" />
+190-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:43:13-37
+191        <service
+191-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:46:9-52:35
+192            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+192-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:47:13-84
+193            android:directBootAware="false"
+193-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:48:13-44
+194            android:enabled="@bool/enable_system_job_service_default"
+194-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:49:13-70
+195            android:exported="true"
+195-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:50:13-36
+196            android:permission="android.permission.BIND_JOB_SERVICE" />
+196-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:51:13-69
+197        <service
+197-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:53:9-59:35
+198            android:name="androidx.work.impl.foreground.SystemForegroundService"
+198-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:54:13-81
+199            android:directBootAware="false"
+199-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:55:13-44
+200            android:enabled="@bool/enable_system_foreground_service_default"
+200-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:56:13-77
+201            android:exported="false" />
+201-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:57:13-37
+202
+203        <receiver
+203-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:61:9-66:35
+204            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+204-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:62:13-88
+205            android:directBootAware="false"
+205-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:63:13-44
+206            android:enabled="true"
+206-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:64:13-35
+207            android:exported="false" />
+207-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:65:13-37
+208        <receiver
+208-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:67:9-77:20
+209            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+209-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:68:13-106
+210            android:directBootAware="false"
+210-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:69:13-44
+211            android:enabled="false"
+211-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:70:13-36
+212            android:exported="false" >
+212-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:71:13-37
+213            <intent-filter>
+213-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:73:13-76:29
+214                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+214-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:74:17-87
+214-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:74:25-84
+215                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+215-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:75:17-90
+215-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:75:25-87
+216            </intent-filter>
+217        </receiver>
+218        <receiver
+218-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:78:9-88:20
+219            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+219-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:79:13-104
+220            android:directBootAware="false"
+220-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:80:13-44
+221            android:enabled="false"
+221-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:81:13-36
+222            android:exported="false" >
+222-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:82:13-37
+223            <intent-filter>
+223-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:84:13-87:29
+224                <action android:name="android.intent.action.BATTERY_OKAY" />
+224-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:85:17-77
+224-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:85:25-74
+225                <action android:name="android.intent.action.BATTERY_LOW" />
+225-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:86:17-76
+225-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:86:25-73
+226            </intent-filter>
+227        </receiver>
+228        <receiver
+228-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:89:9-99:20
+229            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+229-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:90:13-104
+230            android:directBootAware="false"
+230-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:91:13-44
+231            android:enabled="false"
+231-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:92:13-36
+232            android:exported="false" >
+232-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:93:13-37
+233            <intent-filter>
+233-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:95:13-98:29
+234                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+234-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:96:17-83
+234-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:96:25-80
+235                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+235-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:97:17-82
+235-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:97:25-79
+236            </intent-filter>
+237        </receiver>
+238        <receiver
+238-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:100:9-109:20
+239            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+239-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:101:13-103
+240            android:directBootAware="false"
+240-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:102:13-44
+241            android:enabled="false"
+241-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:103:13-36
+242            android:exported="false" >
+242-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:104:13-37
+243            <intent-filter>
+243-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:106:13-108:29
+244                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+244-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:107:17-79
+244-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:107:25-76
+245            </intent-filter>
+246        </receiver>
+247        <receiver
+247-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:110:9-121:20
+248            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+248-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:111:13-88
+249            android:directBootAware="false"
+249-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:112:13-44
+250            android:enabled="false"
+250-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:113:13-36
+251            android:exported="false" >
+251-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:114:13-37
+252            <intent-filter>
+252-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:116:13-120:29
+253                <action android:name="android.intent.action.BOOT_COMPLETED" />
+253-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:107:17-79
+253-->C:\Users\MERVEILLE\Downloads\Telegram Desktop\SafeRoute\SafeRoute\SafeRoute\app\src\main\AndroidManifest.xml:107:25-76
+254                <action android:name="android.intent.action.TIME_SET" />
+254-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:17-73
+254-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:25-70
+255                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+255-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:119:17-81
+255-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:119:25-78
+256            </intent-filter>
+257        </receiver>
+258        <receiver
+258-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:122:9-131:20
+259            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+259-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:123:13-99
+260            android:directBootAware="false"
+260-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:124:13-44
+261            android:enabled="@bool/enable_system_alarm_service_default"
+261-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:125:13-72
+262            android:exported="false" >
+262-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:126:13-37
+263            <intent-filter>
+263-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:128:13-130:29
+264                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+264-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:129:17-98
+264-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:129:25-95
+265            </intent-filter>
+266        </receiver>
+267        <receiver
+267-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:132:9-142:20
+268            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+268-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:133:13-78
+269            android:directBootAware="false"
+269-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:134:13-44
+270            android:enabled="true"
+270-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:135:13-35
+271            android:exported="true"
+271-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:136:13-36
+272            android:permission="android.permission.DUMP" >
+272-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:137:13-57
+273            <intent-filter>
+273-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:139:13-141:29
+274                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+274-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:140:17-88
+274-->[androidx.work:work-runtime:2.9.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\bd2e2f3242437a98dd9a96135ad37924\transformed\work-runtime-2.9.0\AndroidManifest.xml:140:25-85
+275            </intent-filter>
+276        </receiver>
+277
+278        <activity
+278-->[androidx.compose.ui:ui-tooling-android:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\98e7417fe84a86736ec9989e8a424785\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+279            android:name="androidx.compose.ui.tooling.PreviewActivity"
+279-->[androidx.compose.ui:ui-tooling-android:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\98e7417fe84a86736ec9989e8a424785\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+280            android:exported="true" />
+280-->[androidx.compose.ui:ui-tooling-android:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\98e7417fe84a86736ec9989e8a424785\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+281        <activity
+281-->[androidx.compose.ui:ui-test-manifest:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7d5488d2e4c63db85f268d1fd7a30281\transformed\ui-test-manifest-1.6.2\AndroidManifest.xml:23:9-25:39
+282            android:name="androidx.activity.ComponentActivity"
+282-->[androidx.compose.ui:ui-test-manifest:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7d5488d2e4c63db85f268d1fd7a30281\transformed\ui-test-manifest-1.6.2\AndroidManifest.xml:24:13-63
+283            android:exported="true" />
+283-->[androidx.compose.ui:ui-test-manifest:1.6.2] C:\Users\MERVEILLE\.gradle\caches\transforms-3\7d5488d2e4c63db85f268d1fd7a30281\transformed\ui-test-manifest-1.6.2\AndroidManifest.xml:25:13-36
+284
+285        <service
+285-->[androidx.room:room-runtime:2.6.1] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2700a7742772c90fc5b42d2886a9ff3a\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+286            android:name="androidx.room.MultiInstanceInvalidationService"
+286-->[androidx.room:room-runtime:2.6.1] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2700a7742772c90fc5b42d2886a9ff3a\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+287            android:directBootAware="true"
+287-->[androidx.room:room-runtime:2.6.1] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2700a7742772c90fc5b42d2886a9ff3a\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+288            android:exported="false" />
+288-->[androidx.room:room-runtime:2.6.1] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2700a7742772c90fc5b42d2886a9ff3a\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+289
+290        <meta-data
+290-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2c34f596132a74ffba88a75de8eae2c2\transformed\play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+291            android:name="com.google.android.gms.version"
+291-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2c34f596132a74ffba88a75de8eae2c2\transformed\play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+292            android:value="@integer/google_play_services_version" />
+292-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\2c34f596132a74ffba88a75de8eae2c2\transformed\play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+293
+294        <receiver
+294-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+295            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+295-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+296            android:directBootAware="false"
+296-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+297            android:enabled="true"
+297-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+298            android:exported="true"
+298-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+299            android:permission="android.permission.DUMP" >
+299-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+300            <intent-filter>
+300-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+301                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+301-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+301-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+302            </intent-filter>
+303            <intent-filter>
+303-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+304                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+304-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+304-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+305            </intent-filter>
+306            <intent-filter>
+306-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+307                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+307-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+307-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+308            </intent-filter>
+309            <intent-filter>
+309-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+310                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+310-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+310-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\MERVEILLE\.gradle\caches\transforms-3\c9fe3694507460804c2d96ad8fa9010c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+311            </intent-filter>
+312        </receiver>
+313    </application>
+314
+315</manifest>
